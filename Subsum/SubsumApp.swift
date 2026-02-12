@@ -1,11 +1,5 @@
-//
-//  SubsumApp.swift
-//  Subsum
-//
-//  Created by John Chasoulidis Abela on 11/02/2026.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct SubsumApp: App {
@@ -13,5 +7,6 @@ struct SubsumApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Subscription.self, UserSettings.self])
     }
 }
